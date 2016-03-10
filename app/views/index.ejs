@@ -1,11 +1,22 @@
-<!DOCTYPE html>
-<html>
+<html lang="en" ng-app="easyReceipts" class="no-js">
   <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <title>Easy Receipts!</title>
+
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+
+    <div ng-view></div>
+
+
+  <!-- prereqs -->
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="bower_components/angular-resource/angular-resource.js"></script>
+
+  <!-- Own app js here-->
+  <script src="js/app.js"></script>
+  <script src="js/account/controllers.js"></script>
+  <script src="js/dashboard/controllers.js"></script>
+  <script src="js/dashboard/services.js"></script>
   </body>
 </html>
