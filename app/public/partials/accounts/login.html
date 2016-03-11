@@ -1,0 +1,95 @@
+<div class="home-login" ng-controller="LoginPageController">
+  <section class="login-section">
+    <div class="container">
+
+      <div class="row">
+
+          <div class="col-sm-4 col-sm-offset-4" ng-controller="AuthController">
+
+             <h1 class="text-center">SIGN IN</h1>
+             <h5 class="text-center">
+               <strong>
+                 Login to your Easy Receipt Account!
+               </strong>
+             </h5>
+
+             <md-card class="md-whiteframe-6dp">
+            <md-card-content>
+              <div class="alert alert-danger" ng-show="errorDetail"
+                  id="login-error">
+                <span ng-bind="errorDetail"></span>
+              </div>
+
+              <form name="loginForm" class="form-horizontal"
+                layout="column">
+
+                <md-input-container>
+                  <input required type="text"
+                      placeholder="Your username"
+                      name="userName" ng-model="username"
+                      ng-change="showValidation()">
+                </md-input-container>
+
+                <md-input-container>
+                  <label>Your password</label>
+                  <input type="password" id="password-input"
+                      ng-model="password">
+                </md-input-container>
+
+                <md-button type="submit" class="md-primary md-raised"
+                    ng-click="login(loginForm);" ng-disabled="isLoggingIn"
+                    ng-class="{'md-raised': !isLoggingIn}">
+                  <span ng-hide="isLoggingIn">Sign In</span>
+                  <span ng-show="isLoggingIn">
+                    <i class="fa fa-circle-o-notch fa-spin"></i>
+                    Signing you in...
+                  </span>
+                </md-button>
+
+              </form>
+            </md-card-content>
+          </md-card>
+
+
+          </div>
+      </div>
+
+    </div>
+  </section>
+</div>
+
+<!--
+
+<div layout="row">
+  <a href="#" ng-click="forgotPassword = !forgotPassword">
+    Forgot your password?
+  </a>
+</div>
+
+<div ng-if="forgotPassword" layout="column">
+  <p>
+    If you've forgotten your password, enter your email below,
+    and we'll send you a link to help you reset your password.
+  </p>
+
+  <md-input-container>
+    <input type="email" id="email-input"
+        placeholder="Your email address"
+        name="email" ng-model="userCredentials.username"
+        ng-change="showValidation()">
+  </md-input-container>
+
+  <md-button type="submit" class="md-primary"
+      ng-click="sendForgotPassword()"
+      ng-disabled="forgotPasswordRequestSuccess || forgotPasswordRequestInProgress">
+    <span ng-show="forgotPasswordRequestInProgress">
+      Sending...
+    </span>
+    <span ng-hide="forgotPasswordRequestSuccess || forgotPasswordRequestInProgress">
+      Send Reset
+    </span>
+    <span ng-show="forgotPasswordRequestSuccess">
+      Email sent!
+    </span>
+  </md-button>
+</div> -->

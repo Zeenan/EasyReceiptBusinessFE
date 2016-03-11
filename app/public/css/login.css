@@ -1,0 +1,46 @@
+
+.login-section {
+    background-color: #FFF;
+
+    .hoppler-logo {
+        width: 20%;
+    }
+
+    h1 {
+        color: orange;
+    }
+
+    h4 {
+        width: 50%;
+        border-bottom: 1px solid #C2C2C2;
+        line-height: 0.1em;
+        margin: auto;
+        text-align: center;
+        padding-top: 25px;
+    }
+
+    h4 span {
+        background-color: #fff;
+        padding: 0 10px;
+    }
+}
+
+.login-card {
+    margin-left: 0;
+
+    .btn.sign-in-btn {
+        margin-top: 25px;
+        background-color: #017EFE;
+        color: #fff;
+    }
+
+    a {
+        color: @hoppler-orange;
+        text-decoration: none;
+    }
+
+    .forgot-password {
+        margin-top: 12px;
+        margin-right: 8px;
+    }
+}
